@@ -1,0 +1,23 @@
+{
+  "name": "policy-r-standard",
+  "version": "0.1.0",
+  "description": "standard exercise solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SylvainJunca/policy-r-standard.git"
+  },
+  "author": "SylvainJunca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SylvainJunca/policy-r-standard/issues"
+  },
+  "homepage": "https://github.com/SylvainJunca/policy-r-standard#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
