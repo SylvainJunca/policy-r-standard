@@ -1,5 +1,5 @@
 import * as readline from 'readline';
-import { modThree } from './modThree';
+import modThree from './modThree';
 
 const rl = readline.createInterface({
   input: process.stdin,

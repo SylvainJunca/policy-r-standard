@@ -1,23 +1,12 @@
-import { ALPHABET, STATE } from './constants';
+import { ALPHABET, STATE, TRANSTABLE } from './constants';
+import transition from './transition';
 import validateInput from './validateInput';
 
-export function transition(state: STATE, input: string): STATE {
-  const transTable: { [key in STATE]: { [key: string]: STATE } } = {
-    [STATE.S0]: { 0: STATE.S0, 1: STATE.S1 },
-    [STATE.S1]: { 0: STATE.S2, 1: STATE.S0 },
-    [STATE.S2]: { 0: STATE.S1, 1: STATE.S2 },
-  };
-  if (!(state in transTable) || !(input in transTable[state])) {
-    throw new Error(`Invalid STATE or input: STATE=${STATE}, input=${input}`);
-  }
-  return transTable[state][input];
-}
-
-export function modThree(input: string): number {
+export default function modThree(input: string): number {
   validateInput(input, ALPHABET);
   let currentState: STATE = STATE.S0;
   input.split('').forEach((char) => {
-    currentState = transition(currentState, char);
+    currentState = transition(currentState, char, TRANSTABLE);
   });
   return currentState;
 }

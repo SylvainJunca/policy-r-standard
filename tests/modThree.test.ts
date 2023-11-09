@@ -1,32 +1,4 @@
-import { transition, modThree } from '../src/modThree';
-import { STATE } from '../src/constants';
-
-describe('transition', () => {
-  it('should transition correctly from STATE S0', () => {
-    expect(transition(STATE.S0, '0')).toBe(STATE.S0);
-    expect(transition(STATE.S0, '1')).toBe(STATE.S1);
-  });
-
-  it('should transition correctly from STATE S1', () => {
-    expect(transition(STATE.S1, '0')).toBe(STATE.S2);
-    expect(transition(STATE.S1, '1')).toBe(STATE.S0);
-  });
-
-  it('should transition correctly from STATE S2', () => {
-    expect(transition(STATE.S2, '0')).toBe(STATE.S1);
-    expect(transition(STATE.S2, '1')).toBe(STATE.S2);
-  });
-
-  it('should handle invalid input', () => {
-    expect(() => transition(STATE.S0, '2')).toThrow();
-    expect(() => transition(STATE.S1, 'a')).toThrow();
-    expect(() => transition(STATE.S2, '')).toThrow();
-  });
-
-  it('should handle invalid STATE', () => {
-    expect(() => transition(3 as STATE, '0')).toThrow();
-  });
-});
+import modThree from '../src/modThree';
 
 describe('modThree', () => {
   it('should return 1 for input "1101"', () => {
