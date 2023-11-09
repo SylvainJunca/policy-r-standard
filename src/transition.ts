@@ -1,5 +1,3 @@
-// import { TRANSTABLE, STATE } from './constants';
-
 export default function transition<T extends string | number>(
   state: T,
   input: string,
