@@ -1,16 +1,5 @@
-export enum STATE {
-  S0 = 0,
-  S1 = 1,
-  S2 = 2,
-}
-const ALPHABET: string[] = ['0', '1'];
-
-export function validateInput(input: string, alphabet: string[]): void {
-  const regex = new RegExp(`^[${alphabet.join('')}]+$`);
-  if (!regex.test(input)) {
-    throw new Error(`Input must only contain ${alphabet.join(', ')}`);
-  }
-}
+import { ALPHABET, STATE } from './constants';
+import validateInput from './validateInput';
 
 export function transition(state: STATE, input: string): STATE {
   const transTable: { [key in STATE]: { [key: string]: STATE } } = {
