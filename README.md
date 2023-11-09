@@ -36,7 +36,7 @@ You can run the test suites with:
 
 ## Interact with the algorithm
 
-You can aunch the program from the terminal to test the modThree function with:  
+You can execute the program from the terminal to test the modThree function with:  
  `$ npm run execute`
 
 ## Development
