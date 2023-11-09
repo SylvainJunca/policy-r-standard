@@ -1,1 +1,3 @@
-console.log("Setup")
+import askQuestion from './terminal';
+
+askQuestion();
