@@ -1,5 +1,7 @@
 # policy-r-standard
 
+![badge](https://github.com/SylvainJunca/policy-r-standard/actions/workflows/node.js.yml/badge.svg?branch=main)
+
 This is the solution for the standard exercise. The goal is to implement a state transition algorithm to implement the ‘mod-three’ procedure on a binary string.
 
 ## Requirements
